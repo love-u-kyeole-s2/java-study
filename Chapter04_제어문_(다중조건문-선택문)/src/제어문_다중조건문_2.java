@@ -1,0 +1,69 @@
+/*
+ * 	1. 경우의수
+ * 	예) 정수 입력 받아서 음수/양수
+ * 					-------- if else
+ * 	    문자 입력=> 대문자/소문자
+ * 					--------- if~else
+ * 		문자 입력 -> 대문자/소문자/한글/숫자
+ * 				=====================
+ * 
+ * 2.문법사항
+ * 	조건문
+ * 	{
+ * 	}
+ * 3. 어떤 조건=>비교연산자/논리연산자 / 부정연산자 
+ * 	----------모든 연산이 true/false
+ * 
+ */
+import java.util.Scanner;
+public class 제어문_다중조건문_2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan=new Scanner(System.in);
+		System.out.print("점수입력(0~100):");
+		int score=scan.nextInt();
+		//처리=>학점
+//		char c='A';
+//		if(score>=90)
+//			c='A';
+//		else if(score>=80)
+//			c='B';
+//		else if(score>=70)
+//			c='C';
+//		else if(score>=60)
+//			c='D';
+//		else
+//			c='F';
+//		char c='A';
+//		switch(score/10)
+//		{
+//		case 10:
+//		case 9:
+//			c='A';
+//			break;
+//		case 8:
+//			c='B';
+//			break;
+//		case 7:
+//			c='C';
+//			break;
+//		case 6:
+//			c='D';
+//			break;
+//		default:
+//			c='F';
+//		}
+//		System.out.println("학점:"+c);
+		String s=switch(score/10) {
+		case 10,9->"A";
+		case 8->"B";
+		case 7->"C";
+		case 6->"D";
+		default->"F";
+		};
+		System.out.println("학점: "+s);
+
+	}
+
+}
